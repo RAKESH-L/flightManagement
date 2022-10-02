@@ -1,0 +1,62 @@
+<br>
+<br>
+<div class="main-block">
+    <h1>Flight Booking</h1>
+    <form #flightForm="ngForm" (submit)="onflightSubmit(flightForm)">
+      <hr>
+    
+      <label>From: </label><br>
+      <input type="text" name="source" placeholder="ex. New York *" ngModel #source="ngModel"><br /><br />
+      
+      <label>To: </label><br>
+      <input type="text" name="destination" placeholder="ex. London *" ngModel #destination="ngModel"><br /><br />
+      <label>Date: </label><br>
+      <input type="date" name="depDate" ngModel #depDate="ngModel"><br /><br />
+      <hr>
+      <div class="btn-block">
+        <input type="submit"  value="Search">
+      </div>
+    </form>
+  </div>
+  <br>
+  <div class="table_responsive" >
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>AIRLINES</th>
+                <th>SOURCE</th>
+                <th>DEPARTURE TIME</th>
+                <th>DESTINATION</th>
+                <th>ARRIVAL TIME</th>
+                <th>FARE/PERSON</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+    <tbody *ngFor="let f of flightArr">
+        <tr>
+            <td>{{f.id}}</td>
+            <td>{{f.name}}</td>
+            <td>{{f.source}}</td>
+            <td>{{f.depTime}}</td>
+            <td>{{f.destination}}</td>
+            <td>{{f.arvTime}}</td>
+            <td>{{f.priceAdult}}</td>
+     <td>
+         <span class="action_btn">
+            <button (click)="bookFlight(f.id)">Book</button><br>
+        </span>
+    </td>
+    <br />
+    </tr>
+    </tbody>
+    </table>
+</div>
+<!-- 
+<div *ngFor="let b of bookDataArry[key]">
+{{b.name}}
+{{b.source}}
+
+</div> -->
+
+

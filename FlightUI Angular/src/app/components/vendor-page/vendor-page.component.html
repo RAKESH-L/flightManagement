@@ -1,0 +1,31 @@
+<div class="form-style-5">
+    <form #vendorForm="ngForm" (submit)="onVendorSubmit(vendorForm)">
+    <fieldset>
+    <legend><span class="number">1</span>Vendor Page</legend>
+    <input type="text" name="name" placeholder="Flight Name *" ngModel #name="ngModel">
+    <input type="text" name="source" placeholder="Source *" ngModel #source="ngModel">
+    <input type="text" name="destination" placeholder="Destination *" ngModel #destination="ngModel">
+
+    <legend><span class="number">2</span> Date-Time</legend>
+    <label>Departure Date</label>
+    <input type="date" name="depDate" ngModel #depDate="ngModel">
+
+    <label>Departure Time</label>
+    <input type="time" name="depTime" ngModel #depTime="ngModel">
+
+    <label>Arrival Date</label>
+    <input type="date" name="arvDate" ngModel #arvDate="ngModel">
+
+    <label>Arrival Time</label>
+    <input type="time" name="arvTime" placeholder="Arrival Time *" ngModel #arvTime="ngModel">
+
+    </fieldset>
+    <fieldset>
+    <legend><span class="number">3</span> Price-Occupancy Datails</legend>
+    <input type="text" name="priceAdult" placeholder="Adult Price *" ngModel #priceAdult="ngModel">
+    <input type="text" name="priceChild" placeholder="Child Price *" ngModel #priceChild="ngModel">
+    <input type="text" name="seats" placeholder="Total Seats *" ngModel #seats="ngModel">
+    </fieldset>
+    <input type="submit" value="Add Flight" />
+    </form>
+    </div>

@@ -1,0 +1,51 @@
+<div id="container">  
+  <div class="product-details">
+    <h1>BookMyFlight</h1><br>
+    <br>
+      <label>Name: </label><br>
+      <input type="text" name="name" placeholder="ex. John *" ngModel #name="ngModel"><br /><br />
+      <label>Contact: </label><br>
+      <input type="text" name="contact" placeholder="ex. 985473528 *" ngModel #contact="ngModel"><br /><br />
+      <label>Email: </label><br>
+      <input type="text" name="email" placeholder="ex. John@gmail.com *" ngModel #email="ngModel"><br /><br />
+    
+      <label>Fare/Adult :</label>{{flightDataA.priceAdult}}&nbsp;&nbsp;
+      <label>Fare/Child :</label>{{flightDataA.priceChild}}<br><br>
+
+      <form #fareForm="ngForm" (change)="change(fareForm)">        <!-- (change)="change(fareForm) -->
+        <label>No.of.Adults :</label>
+        <input type="number" name="no_of_adult" ngModel #no_of_adult="ngModel"><br><br>
+        <label>No.of.Children :</label>
+        <input type="number" name="no_of_children" ngModel #no_of_children="ngModel"><br /><br>
+        <!-- <label>Total Fare :</label> -->
+      </form>
+  
+      <div class="control">
+        <button class="btn">
+        <span class="price">{{sum}}</span>
+        <span class="shopping-cart">{{sum}}<i aria-hidden="true"></i></span>
+        <span class="buy">Book Now</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="product-image">
+    
+    <img src="assets/image/flight.jpg" alt="">
+    
+
+    <div class="info">
+      <h2> Description</h2>
+      <ul>
+        <label>AirLines: </label>{{flightDataA.name}}<br />
+        <label class="from">From: </label>
+          {{flightDataA.source}}<br>
+        <label class="to">To: </label>
+          {{flightDataA.destination}}<br />
+          <br>
+      </ul>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+<!-- <p>all-vendor works!</p>
+<div class="flight-box"
+*ngFor="let f of flightArry">
+{{f.name}}
+{{f.source}}
+{{f.destination}}
+{{f.depDate}}
+{{f.depTime}}
+{{f.arvDate}}
+{{f.arvTime}}
+{{f.priceAdult}}
+{{f.priceChild}}
+{{f.seats}}
+</div> -->
+
+<div class="table_responsive" >
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th>AIRLINES</th>
+                <th>SOURCE</th>
+                <th>DESTINATION</th>
+                <th>DEPATURE DATE</th>
+                <th>DEPARTURE TIME</th>
+                <th>ARRIVAL DATE</th>
+                <th>ARRIVAL TIME</th>
+                <th>PRICE ADULT</th>
+                <th>PRICE CHILD</th>
+                <th>CAPACITY</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+    <tbody *ngFor="let f of flightArry">
+        <tr>
+            <td>{{f.name}}</td>
+            <td>{{f.source}}</td>
+            <td>{{f.destination}}</td>
+            <td>{{f.depDate}}</td>
+            <td>{{f.depTime}}</td>
+            <td>{{f.arvDate}}</td>
+            <td>{{f.arvTime}}</td>
+            <td>{{f.priceAdult}}</td>
+            <td>{{f.priceChild}}</td>
+            <td>{{f.seats}}</td>
+     <td>
+         <span class="action_btn">
+             <a routerLink="/booking-confirmation">Book</a>
+        </span>
+    </td>
+    <br />
+    </tr>
+    </tbody>
+    </table>
+</div>
